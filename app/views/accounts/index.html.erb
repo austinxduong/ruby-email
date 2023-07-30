@@ -10,11 +10,10 @@ gets all articles from the index action Controller and renders its data from the
 <ul>
     <% @accounts.each do |account| %>
         <li>
-        <%= account.firstname %>
-        <%= account.lastname %>
-        <%= account.email %>
-        <%= account.username %>
-        <%= account.created_at %>
+
+            <a href="/accounts/<%= account.id %>">
+                <p>View Account: <%= account.username%> [<%=account.email %>] - created at: <%= account.created_at %></p>
+            </a>
         </li>
     <% end %>
 <ul>

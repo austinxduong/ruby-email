@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   root "accounts#index"
 
   get "/accounts", to:"accounts#index"
+  get "/accounts/:id", to:"accounts#show"
 end
