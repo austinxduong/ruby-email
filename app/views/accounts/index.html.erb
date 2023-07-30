@@ -1,2 +1,20 @@
-<h1>Create an account</h1>
+<h1>All accounts</h1>
 <p>home page</p>
+
+<% 
+=begin
+gets all articles from the index action Controller and renders its data from the table, to the view 
+=end
+%>
+
+<ul>
+    <% @accounts.each do |account| %>
+        <li>
+        <%= account.firstname %>
+        <%= account.lastname %>
+        <%= account.email %>
+        <%= account.username %>
+        <%= account.created_at %>
+        </li>
+    <% end %>
+<ul>
