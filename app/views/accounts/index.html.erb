@@ -7,14 +7,14 @@
 gets all articles from the index action Controller and renders its data from the table, to the view 
 =end
 %>
-<%= link_to "Create a New Account", new_account_path %> 
+<%= link_to "Create a New Account ✨", new_account_path %> 
 
 <ul>
     <% @accounts.each do |account| %>
         <li>
 
             <a href="<%= account_path(account) %>">
-                <p>View Account: <%= account.username%> [<%=account.email %>] - [created at: <%= account.created_at %>] - [last updated: <%= account.updated_at %>]</p>
+                <p>View Account 📖: 🧚 username = '<%= account.username%>' [📧 email= <%=account.email %>] - [🌱 created at: <%= account.created_at %>] - [🪴 last updated: <%= account.updated_at %>]</p>
             </a>
         </li>
     <% end %>
