@@ -7,11 +7,12 @@ gets all articles from the index action Controller and renders its data from the
 =end
 %>
 
+
 <ul>
     <% @accounts.each do |account| %>
         <li>
 
-            <a href="/accounts/<%= account.id %>">
+            <a href="<%= account_path(account) %>">
                 <p>View Account: <%= account.username%> [<%=account.email %>] - created at: <%= account.created_at %></p>
             </a>
         </li>
