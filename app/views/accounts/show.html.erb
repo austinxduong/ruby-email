@@ -6,5 +6,10 @@
 
 <%= link_to "🌌 All Accounts", accounts_path %> 
 <%= link_to  "🪄 Edit Account", edit_account_path %> 
+<%= link_to "🗑️ Delete", account_path(@account), data: {
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure?"
+  } %>
+
 
 
