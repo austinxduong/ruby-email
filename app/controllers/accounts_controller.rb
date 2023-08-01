@@ -16,7 +16,8 @@ class AccountsController < ApplicationController
     @account = Account.new(account_params)
 
     if @account.save
-      redirect_to @account
+      UserMailer.with(account: @account).welcome_email.deliver_now
+      redirect_to @account, notice: " account successfully created. please check for confirmation email."
     else
       render :new, status: :unprocessable_entity
     end
@@ -30,7 +31,7 @@ class AccountsController < ApplicationController
     @account = Account.find(params[:id])
 
     if @account.update(account_params)
-      redirect_to @account
+      redirect_to @account, notice: "account successfully updated."
     else
       render :edit, status: :unprocessable_entity
     end
@@ -40,7 +41,7 @@ class AccountsController < ApplicationController
     @account = Account.find(params[:id])
     @account.destroy
 
-    redirect_to root_path, status: :see_other
+    redirect_to root_path, status: :see_other, notice: "account successfully deleted."
 
   end
 
