@@ -74,3 +74,11 @@ end
 
 
 gem "dockerfile-rails", ">= 1.5", :group => :development
+
+gem "twilio-ruby"
+
+gem "actionpack-page_caching"
+
+gem 'bootstrap-sass', '~> 3.4.1'
+
+gem 'jquery-rails'
