@@ -1,6 +1,10 @@
 
 
-<p style="color: green"><%= notice %></p>
+<% flash.each do |type, message| %>
+    <div class="alert alert-success">
+      <%= message %>
+    </div>
+  <% end %>
 
 
 
