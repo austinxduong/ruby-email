@@ -1,2 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.account-container{
+    display: flex;
+    justify-content:space-around;
+}

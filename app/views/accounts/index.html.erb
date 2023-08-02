@@ -1,8 +1,9 @@
 <h1>All accounts</h1>
 <p>home page</p>
+<%= link_to "Create a New Account ✨", new_account_path, class: "btn btn-default" %> 
 
+<div class="account-container">
 
-<%= link_to "Create a New Account ✨", new_account_path %> 
 
 <ul>
     <% @accounts.each do |account| %>
@@ -14,4 +15,4 @@
         </li>
     <% end %>
 <ul>
-
+</div>
