@@ -1,6 +1,5 @@
-<div class="alert alert-success :notice">
+
 <p style="color: green"><%= notice %></p>
-</div>
 
 <div class="thumbnail">
 <%= form_with model: @account do |form| %>
@@ -38,7 +37,7 @@
 
 
     <div>
-    📝 <%= form.submit %>
+    📝 <%= form.submit :"Save Changes", class: 'btn btn-success' %>
     </div>
 
     <%= link_to "🌌 Back to all Accounts", accounts_path, class: "btn btn-default" %> 
