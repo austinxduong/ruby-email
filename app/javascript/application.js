@@ -4,3 +4,7 @@ import "controllers"
 
 
 //= require bootstrap-sprockets
+
+$('.delete_notice').on('click', function(){    $('.alert-dismissible').hide(); });
+
+
